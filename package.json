@@ -1,0 +1,27 @@
+{
+  "name": "fastrequest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Stiven Gomez Mazo",
+  "license": "ISC",
+  "description": "apartado principal de la aplicacion",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "cors": "^2.8.5",
+    "countup.js": "^2.8.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
+    "install": "^0.13.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.10.0",
+    "npm": "^11.2.0",
+    "path": "^0.12.7"
+  }
+}
