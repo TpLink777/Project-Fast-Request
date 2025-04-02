@@ -30,14 +30,13 @@
 
 
 
-body {
+ body {
     min-height: 100vh;
     background-color: var(--white);
     overflow-x: hidden; 
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     line-height: 1.6;
-  
 }
 
 body.loaded {
@@ -195,7 +194,7 @@ header .menu .btn:hover {
 .main-content {
     margin-left: 280px;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: visible;
     padding: 40px;
 }
 

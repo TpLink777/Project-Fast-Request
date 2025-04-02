@@ -12,7 +12,6 @@
   "license": "ISC",
   "description": "apartado principal de la aplicacion",
   "dependencies": {
-    "aos": "^3.0.0-beta.6",
     "cors": "^2.8.5",
     "countup.js": "^2.8.0",
     "dotenv": "^16.4.7",

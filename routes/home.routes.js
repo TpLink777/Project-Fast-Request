@@ -18,7 +18,8 @@ router.get('/', (req, res) => {
 router.get('/nosotros', (req, res) => {
     res.render('secciones/nosotros', { title: 'Nosotros',
         customCSS: '<link rel="stylesheet" href="/css/nosotros.css">',
-        customJS: `<script src="/js/nosotros.js" type="module"></script>` });
+        customJS: `<script src="/js/nosotros.js"></script>
+          <script src="/js/countUp.js" type="module" ></script>` });
     });
 
 
@@ -46,7 +47,7 @@ router.get('/servicios', (req, res) => {
 router.get('/contactanos', (req, res) => {
     res.render('secciones/contactanos', { title: 'Contactanos',
         customCSS: '<link rel="stylesheet" href="/css/contactanos.css">',
-        customJS: '<script src="/js/contactanos.js"></script>'
+        customJS: `<script src="/js/contactanos.js"></script>`
     });
 })
 
