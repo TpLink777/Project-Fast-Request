@@ -63,3 +63,5 @@ router.get('/terminos', (req, res) => {
 })
 
 module.exports = router;
+
+

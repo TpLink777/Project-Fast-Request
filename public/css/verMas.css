@@ -1,0 +1,430 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* COLORES*/
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --white-red: rgba(216, 87, 87, 1);
+    --white-green: #7bb934;
+    --font:  "Montserrat", sans-serif;
+    --purple: #8F00FF;
+    --light: #f6f6f6;
+    --primary: rgb(9,9,71);
+    --secondary: rgb(70,70,55);
+    --orange: #ffa600;
+    --gris-calritico: #ccc;
+    --gris-unpoco-oscuro: #aaa;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--font), sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--black);
+}
+
+
+
+ body {
+    min-height: 100vh;
+    background-color: var(--white);
+    overflow-x: hidden; 
+
+    transition: opacity 0.5s ease-in-out;
+    line-height: 1.6;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+
+/*--------------- Navbar ---------------*/
+header {
+    z-index: 1000;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: var(--white); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+
+header .container-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+header .logo {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+
+header .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header .menu ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+header .menu ul li {
+    list-style-type: none;
+}
+
+header .menu ul li a {
+    position: relative;
+    color: var(--black);
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 5px;
+    transition: all 0.3s ease;
+}
+
+header .menu  a::after {
+    content: '';
+    position: absolute;
+    background-color: var(--black);
+    box-shadow: 0 0 10px var(--black);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.4s ease-in-out;
+}
+
+header .menu ul li a:hover {
+    text-shadow: 0 0 10px var(--black);
+}
+
+header .menu ul li a:hover::after {
+    width: 100%;
+}
+
+header .menu .btn {
+    width: 100px;
+    height: 35px;
+    border-radius: 25px;
+    margin-left: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px var(--black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header .menu .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--black);
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+/*  --------------- Graficos interactivos ------------------ */
+.graficos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contenedor-graficos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+
+
+.grafico, .imagen {
+    flex: 1;
+    max-width: 35%;
+}
+
+.grafico canvas {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/*  ---------------- ventajas ---------------- */
+.ventajas {
+    padding: 50px 30px;
+    background-color: var(--light);
+    text-align: center;
+}
+
+.ventajas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ventaja {
+    flex: 1 1 250px;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--orange);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.ventaja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.ventaja h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.ventaja p {
+    color: var(--secondary);
+    margin-top: auto;
+}
+
+/* -------------- video explicativo ---------------- */
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+    background: linear-gradient(to bottom, var(--white), var(--light));
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+    display: block;
+}
+
+/* ---------------- boton ----------------- */
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+
+ /* ---------------Footer--------------- */
+
+ footer {
+    padding: 40px 20px;
+    margin-top: 400px;
+    border-top: 1px solid #d8d8d8;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+footer .footer-container .footer-section {
+    flex: 1 1 250px;
+    min-width: 250px;
+    line-height: 1.5rem;
+}
+
+footer .footer-container .footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--orange);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+footer .footer-container .footer-section a {
+    display: block;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--orange);
+}
+
+footer .footer-container .footer-section ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2rem;
+}
+
+footer .footer-container .footer-section li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer .footer-container .footer-section ul li h5 {
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+footer .footer-container .footer-section .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 5px auto;
+}
+
+footer .footer-container .footer-section .social-icons a {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #d8d8d8;
+}
+
+
+/* --------------- Responsive --------------- */
+@media screen and (max-width: 1024px) {
+    .contenedor-graficos {
+        flex-direction: column;
+        align-items: center;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+      
+    .fila {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .grafico, .imagen {
+        flex: 1 1 100%;
+        max-width: 500px;
+    }
+    
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .ventajas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container iframe {
+        height: 200px;
+    }
+}
