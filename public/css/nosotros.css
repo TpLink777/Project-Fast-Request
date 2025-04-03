@@ -29,6 +29,7 @@
 
 
 
+
 body {
     min-height: 100vh;
     background-color: var(--white);
@@ -45,53 +46,7 @@ body.loaded {
 
 
 /*--------------- Navbar ---------------*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* COLORES*/
-:root{
-    --white: #FFFFFF;
-    --black: #000000;
-    --white-red: rgba(216, 87, 87, 1);
-    --white-green: #7bb934;
-    --font:  "Montserrat", sans-serif;
-    --purple: #8F00FF;
-    --light: #f6f6f6;
-    --primary: rgb(9,9,71);
-    --secondary: rgb(70,70,55);
-    --orange: #ffa600;
-    --gris-calritico: #ccc;
-    --gris-unpoco-oscuro: #aaa;
-}
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:var(--font), sans-serif;
-    text-decoration: none;
-    list-style-type: none;
-    color: var(--black);
-}
-
-
-
-body {
-    min-height: 100vh;
-    background-color: var(--white);
-    overflow-x: hidden; 
-    transition: opacity 0.5s ease-in-out;
-    line-height: 1.6;
-  
-}
-
-body.loaded {
-    opacity: 1;
-}
-
-
-
-/*--------------- Navbar ---------------*/
 header {
     z-index: 1000;
     position: fixed; 
@@ -592,6 +547,7 @@ footer .footer-container .footer-section .social-icons a {
         display: none;
     }
 }
+
 
 
 @media (max-width: 768px) {

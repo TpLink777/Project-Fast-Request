@@ -62,6 +62,13 @@ router.get('/terminos', (req, res) => {
     })
 })
 
+router.get('/verMas', (req, res) => {
+    res.render('secciones/verMas', {title: 'Animate Ahora!',
+        customCSS:`<link rel="stylesheet" href="/css/verMas.css">`,
+        customJS: `<script src="/js/graficos.js"></script>`
+    })
+})
+
 module.exports = router;
 
 
