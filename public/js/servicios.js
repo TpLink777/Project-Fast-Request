@@ -44,37 +44,3 @@ navItems.forEach(item => {
 
 
 
-
-document.addEventListener('DOMContentLoaded' , e => {
-
-    menuHamburguesa('.panel-btn' , '.sidebar' , '.sidebar-nav')
-    menuInicial('.menu-btn' , '.menu', '.menu-act a')
-})
-
-
-function menuHamburguesa(btn, panel, panelLink){
-
-    document.addEventListener('click' , (e) => {
-        if(e.target.matches(btn) || e.target.matches(`${btn} *`)){
-            e.preventDefault()
-            document.querySelector(panel).classList.toggle('is-active')
-        }
-
-        if(e.target.matches(panelLink) || e.target.closest(panelLink)){
-            e.preventDefault()
-            document.querySelector(panel).classList.remove('is-active')
-            
-        }
-    })
-}
-
-
-
-function menuInicial(btnClick, panelPrincipal, navClick) {
-    document.addEventListener('click', (e) => {
-        if(e.target.matches(btnClick) || e.target.matches(`${btnClick} *`)) {
-            e.preventDefault();
-            document.querySelector(panelPrincipal).classList.toggle('is-activee');
-        }
-    });
-}

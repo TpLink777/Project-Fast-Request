@@ -198,9 +198,6 @@ footer p a {
 footer a:hover {
     text-decoration: underline;
 }
-.btn-menu{
-    display: none;
-}
 
 /* --------------- Diseño Responsivo ---------------*/
 
@@ -254,7 +251,7 @@ footer a:hover {
     header .menu .btn {
         width: 90px;
         height: 32px;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     .btn-menu{
         display: none;
@@ -265,6 +262,91 @@ footer a:hover {
     }
     
 }
+
+@media screen and (max-width: 630px){
+    .container-menu .logo img {
+        width: 80px;
+    }
+    .container-menu .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.586);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: 0.3s ease-in-out;
+        z-index: 999;
+    }
+    
+    .container-menu .menu.active {
+        transform: translateX(0);
+    }
+    
+    .container-menu .menu .menu-act {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    header .menu .menu-act li{
+      margin: 10px;
+    }
+    
+    
+    header .menu .menu-act li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+    
+    .btn-menu {
+        position: fixed;
+        z-index: 1001;
+        top: 10px;
+        right: 1vw;
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        margin: 0 15px 5px 0;
+        cursor: pointer;
+    }
+    .btn-menu i {
+        font-size: 1.5rem;
+        color: #ff6b00;
+    }
+
+    header .menu ul li a::after {
+        content: '';
+        position: absolute;
+        background-color: var(--white);
+        box-shadow: 0 0 15px var(--white);
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: width 0.4s ease-in-out;
+    }
+
+    header .menu .btn {
+        display: none;
+    }
+}
+
 
 
 @media (max-width: 480px) {
@@ -317,44 +399,6 @@ footer a:hover {
         font-size: 1.5rem;
     }
     
-    .btn-menu {
-        position: fixed;
-        z-index: 1001;
-        top: 10px;
-        right: 1vw;
-        width: 3rem;
-        height: 3rem;
-        border: 1px solid transparent;
-        border-radius: 50%;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--white);
-        margin: 0 15px 5px 0;
-        cursor: pointer;
-    }
-    .btn-menu i {
-        font-size: 1.5rem;
-        color: #ff6b00;
-    }
-
-    header .menu ul li a::after {
-        content: '';
-        position: absolute;
-        background-color: var(--white);
-        box-shadow: 0 0 15px var(--white);
-        height: 3px;
-        width: 0;
-        left: 0;
-        bottom: -10px;
-        transition: width 0.4s ease-in-out;
-    }
-
-    header .menu .btn {
-        display: none;
-         
-     }
      .header h1 {
         color: var(--white);
         margin: 0;
@@ -414,44 +458,6 @@ footer a:hover {
         font-size: 1.5rem;
     }
     
-    .btn-menu {
-        position: fixed;
-        z-index: 1001;
-        top: 10px;
-        right: 1vw;
-        width: 3rem;
-        height: 3rem;
-        border: 1px solid transparent;
-        border-radius: 50%;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--white);
-        margin: 0 15px 5px 0;
-        cursor: pointer;
-    }
-    .btn-menu i {
-        font-size: 1.5rem;
-        color: #ff6b00;
-    }
-
-    header .menu ul li a::after {
-        content: '';
-        position: absolute;
-        background-color: var(--white);
-        box-shadow: 0 0 15px var(--white);
-        height: 3px;
-        width: 0;
-        left: 0;
-        bottom: -10px;
-        transition: width 0.4s ease-in-out;
-    }
-
-    header .menu .btn {
-        display: none;
-         
-     }
      .header h1 {
         color: var(--white);
         margin: 0;

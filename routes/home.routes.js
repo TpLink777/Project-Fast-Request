@@ -8,8 +8,9 @@ require('dotenv').config();
 // llamada a la vista principal
 router.get('/', (req, res) => {
     res.render('index' , { title: 'Inicio', 
-        customCSS: '<link rel="stylesheet" href="/css/style.css">',
-        customJS: '<script src="/js/scrollEffect.js"></script>' 
+        customCSS: `<link rel="stylesheet" href="/css/style.css">`,
+        customJS: `<script src="/js/scrollEffect.js"></script> 
+        <script src="/js/comunicateYa.js"></script>`,
     });  
 });
 
@@ -37,8 +38,8 @@ router.get('/politica', (req, res) => {
 router.get('/servicios', (req, res) => {
     res.render('secciones/servicios', { title: 'Servicios', 
         hideFooter: true,
-        customCSS: '<link rel="stylesheet" href="/css/servicios.css">',
-        customJS: '<script src="/js/servicios.js"></script>' 
+        customCSS:` <link rel="stylesheet" href="/css/servicios.css">`,
+        customJS:` <script src="/js/servicios.js"></script>`
     });
 });
 
